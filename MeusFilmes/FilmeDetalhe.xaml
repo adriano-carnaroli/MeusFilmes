@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MeusFilmes.FilmeDetalhe"
+             Title="Detalhes">
+    <ContentPage.Content>
+        <ScrollView x:Name="scroll" BackgroundColor="Black">
+            <StackLayout Padding="10,20,10,10" Orientation="Vertical" BackgroundColor="Black">
+                <Image Source="{Binding capa}" HeightRequest="250"/>
+                <Label Text="{Binding titulo}" TextColor="White" FontSize="22" FontAttributes="Bold" FontFamily="monospace"/>
+                <StackLayout Orientation="Horizontal" Margin="0,10,0,0">
+                    <Label Text="{Binding ano}" TextColor="White" FontSize="16"/>
+                    <Label Text=" - " TextColor="White" FontSize="16"/>
+                    <Label Text="{Binding genero}" TextColor="White" FontSize="16"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Titulo Original:" TextColor="White" FontAttributes="Italic" FontSize="16"/>
+                    <Label Text="{Binding titulo_original}" TextColor="Gray" FontSize="16"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Idioma Original:" TextColor="White" FontAttributes="Italic" FontSize="16"/>
+                    <Label Text="{Binding idioma_original}" TextColor="Gray" FontSize="16"/>
+                </StackLayout>
+                <Label Text="{Binding sinopse}" Margin="0,10,0,0" TextColor="Gray" FontSize="16"/>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
